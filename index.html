@@ -1,85 +1,392 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trendora BD | Gadgets & Clothes</title>
-<meta name="description" content="Trendora BD - Trending Gadgets & Fashion in Bangladesh">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f7f7f8;color:#171717;line-height:1.6}
-a{text-decoration:none;color:inherit}
-header{background:#111;color:#fff;position:sticky;top:0;z-index:10}
-.nav{max-width:1100px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:24px;font-weight:800}.logo span{color:#ff4d6d}
-.nav a{margin-left:18px;font-size:14px;color:#ddd}
-.hero{background:linear-gradient(135deg,#111,#292929);color:#fff;padding:75px 20px}
-.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.hero h1{font-size:48px;line-height:1.1;margin-bottom:18px}.hero h1 span{color:#ff4d6d}
-.hero p{color:#ddd;font-size:18px;margin-bottom:25px}
-.btn{display:inline-block;background:#ff4d6d;color:#fff;padding:13px 22px;border-radius:8px;font-weight:700;margin-right:8px}
-.btn.alt{background:#fff;color:#111}
-.hero-card{background:#fff;color:#111;border-radius:18px;padding:35px;text-align:center;box-shadow:0 15px 40px #0005}
-.hero-card .emoji{font-size:85px}
-section{max-width:1100px;margin:auto;padding:55px 20px}
-.title{text-align:center;margin-bottom:30px}.title h2{font-size:32px}.title p{color:#666}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px #00000010}
-.pic{height:210px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:70px}
-.card-body{padding:18px}.card h3{margin-bottom:7px}.price{font-size:20px;font-weight:800;margin:10px 0 15px}.order{display:block;text-align:center;background:#111;color:#fff;padding:10px;border-radius:7px;font-weight:700}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:#fff;padding:25px;border-radius:12px;text-align:center}.feature b{display:block;font-size:18px;margin:8px}
-.contact{background:#111;color:#fff;border-radius:18px;padding:40px;text-align:center}.contact p{color:#ccc;margin:10px 0 20px}
-footer{background:#0b0b0b;color:#aaa;text-align:center;padding:25px 15px;font-size:14px}
-@media(max-width:750px){.hero-inner{grid-template-columns:1fr}.hero h1{font-size:38px}.products,.features{grid-template-columns:1fr}.nav a{margin-left:9px}.hero{padding:50px 20px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trendora BD | Online Store</title>
+
+  <meta name="description" content="Trendora BD - Trending Gadgets & Fashion. সহজ অর্ডার এবং Cash on Delivery.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #f6f6f6;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 16px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .nav a {
+      color: #fff;
+      margin-left: 18px;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111, #333);
+      color: #fff;
+      padding: 70px 5%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #ddd;
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto auto 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4d4d;
+      color: #fff;
+      padding: 13px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn.alt {
+      background: #fff;
+      color: #111;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 5%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      max-width: 380px;
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .pic {
+      height: 300px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #777;
+      font-size: 18px;
+    }
+
+    .card-body {
+      padding: 22px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 10px 0;
+    }
+
+    .features {
+      margin: 15px 0;
+      color: #555;
+    }
+
+    .features div {
+      margin: 5px 0;
+    }
+
+    .order {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .order input,
+    .order textarea {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+
+    .order textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .order button {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .contact {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      max-width: none;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #080808;
+      color: #aaa;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .nav a {
+        margin-left: 8px;
+        font-size: 13px;
+      }
+
+      .order {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header>
   <div class="nav">
-    <div class="logo">Trendora <span>BD</span></div>
-    <div><a href="#products">Products</a><a href="#contact">Contact</a></div>
+    <div class="logo">Trendora BD</div>
+
+    <div>
+      <a href="#products">Products</a>
+      <a href="#order">Order</a>
+    </div>
   </div>
 </header>
 
+
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Trendora <span>BD</span></h1>
-      <p>Trending Gadgets & Fashion — আপনার পছন্দের পণ্য, সহজ অর্ডার এবং Cash on Delivery.</p>
-      <a class="btn" href="#products">Shop Now</a>
-      <a class="btn alt" target="_blank" href="https://www.facebook.com/share/1EEo1NfhcJ/">Facebook Page</a>
-    </div>
-    <div class="hero-card"><div class="emoji">🛍️</div><h2>Shop Smart. Shop Trendy.</h2><p>Gadgets • Clothes • More</p></div>
-  </div>
+
+  <h1>Trendora BD</h1>
+
+  <p>
+    Trending Gadgets & Fashion —
+    আপনার পছন্দের পণ্য, সহজ অর্ডার এবং Cash on Delivery.
+  </p>
+
+  <a class="btn" href="#products">Shop Now</a>
+
 </section>
+
 
 <section id="products">
-  <div class="title"><h2>Featured Products</h2><p>আপনার পছন্দের পণ্য বেছে নিয়ে WhatsApp-এ অর্ডার করুন।</p></div>
+
+  <h2 class="title">Our Products</h2>
+
   <div class="products">
-    <div class="card"><div class="pic">🎧</div><div class="card-body"><h3>Wireless Earbuds</h3><p>স্টাইলিশ ও দৈনন্দিন ব্যবহারের জন্য উপযোগী।</p><div class="price">৳ Add Price</div><a class="order" href="https://wa.me/8801707443977?text=আমি%20Wireless%20Earbuds%20অর্ডার%20করতে%20চাই।" target="_blank">Order on WhatsApp</a></div></div>
-    <div class="card"><div class="pic">⌚</div><div class="card-body"><h3>Smart Watch</h3><p>ট্রেন্ডি ডিজাইন ও স্মার্ট ফিচার।</p><div class="price">৳ Add Price</div><a class="order" href="https://wa.me/8801707443977?text=আমি%20Smart%20Watch%20অর্ডার%20করতে%20চাই।" target="_blank">Order on WhatsApp</a></div></div>
-    <div class="card"><div class="pic">👕</div><div class="card-body"><h3>Trending Fashion</h3><p>নতুন ট্রেন্ডের পোশাক ও ফ্যাশন আইটেম।</p><div class="price">৳ Add Price</div><a class="order" href="https://wa.me/8801707443977?text=আমি%20Fashion%20Product%20অর্ডার%20করতে%20চাই।" target="_blank">Order on WhatsApp</a></div></div>
+
+    <div class="card">
+
+      <div class="pic">
+        🛍️<br>
+        Product Image<br>
+        Coming Soon
+      </div>
+
+      <div class="card-body">
+
+        <h3>Chanderi Silk Digital Print Saree</h3>
+
+        <div class="price">৳ 1,000</div>
+
+        <div class="features">
+          <div>✨ Fabric: Chanderi Silk</div>
+          <div>🌸 Multi-color floral design</div>
+          <div>💕 Soft & comfortable</div>
+          <div>👗 Elegant look</div>
+          <div>ℹ️ Blouse piece নেই</div>
+          <div>🎉 Party, অনুষ্ঠান ও photoshoot-এর জন্য উপযুক্ত</div>
+        </div>
+
+        <a class="btn" href="#order">Order Now</a>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
-<section>
-  <div class="title"><h2>Why Trendora BD?</h2></div>
-  <div class="features">
-    <div class="feature">🚚<b>Cash on Delivery</b><span>সুবিধাজনক অর্ডার ব্যবস্থা</span></div>
-    <div class="feature">✨<b>Trending Products</b><span>নতুন ও জনপ্রিয় পণ্যের কালেকশন</span></div>
-    <div class="feature">💬<b>Easy Support</b><span>WhatsApp-এ সরাসরি যোগাযোগ</span></div>
+
+<section id="order">
+
+  <h2 class="title">Place Your Order</h2>
+
+  <div class="order">
+
+    <form onsubmit="sendOrder(); return false;">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="আপনার নাম"
+        required
+      >
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="আপনার মোবাইল নম্বর"
+        required
+      >
+
+      <textarea
+        id="address"
+        placeholder="আপনার সম্পূর্ণ ঠিকানা"
+        required
+      ></textarea>
+
+      <button class="btn" type="submit">
+        Confirm Order on WhatsApp
+      </button>
+
+    </form>
+
   </div>
+
 </section>
 
-<section id="contact">
-  <div class="contact">
-    <h2>Order / Contact Us</h2>
-    <p>অর্ডার করতে WhatsApp-এ মেসেজ করুন অথবা আমাদের Facebook Page ভিজিট করুন।</p>
-    <a class="btn" target="_blank" href="https://wa.me/8801707443977">WhatsApp: 01707443977</a>
-    <a class="btn alt" target="_blank" href="https://www.facebook.com/share/1EEo1NfhcJ/">Facebook Page</a>
-  </div>
+
+<section class="contact">
+
+  <h2>Contact Us</h2>
+
+  <p>
+    অর্ডার করতে WhatsApp-এ মেসেজ করুন অথবা আমাদের Facebook Page ভিজিট করুন।
+  </p>
+
+  <a
+    class="btn"
+    target="_blank"
+    href="https://wa.me/8801707443977"
+  >
+    WhatsApp
+  </a>
+
+  <a
+    class="btn alt"
+    target="_blank"
+    href="https://www.facebook.com/share/1EE01NfhcJ/"
+  >
+    Facebook Page
+  </a>
+
 </section>
 
-<footer>© 2026 Trendora BD. All rights reserved.</footer>
+
+<footer>
+  © 2026 Trendora BD. All rights reserved.
+</footer>
+
+
+<script>
+
+function sendOrder() {
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
+
+  const message =
+    "🛍️ New Order - Trendora BD\n\n" +
+    "Product: Chanderi Silk Digital Print Saree\n" +
+    "Price: ৳1000\n\n" +
+    "Customer Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Address: " + address;
+
+  const whatsappNumber = "8801707443977";
+
+  const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+
+}
+
+</script>
+
 </body>
 </html>
