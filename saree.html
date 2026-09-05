@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trendora BD | Premium Saree</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#fff8f8;color:#222;line-height:1.6}
+    .top{background:#111;color:#fff;text-align:center;padding:9px;font-size:14px}
+    .wrap{max-width:1050px;margin:auto;padding:20px}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:25px 0}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .gallery img{width:100%;height:280px;object-fit:cover;border-radius:14px;box-shadow:0 4px 15px #0001}
+    .tag{display:inline-block;background:#ffe0e0;color:#a00000;padding:7px 12px;border-radius:20px;font-weight:bold;margin-bottom:12px}
+    h1{font-size:38px;line-height:1.2;margin-bottom:12px}
+    .price{font-size:32px;font-weight:bold;color:#d40000;margin:15px 0}
+    .old{text-decoration:line-through;color:#888;font-size:18px;margin-left:8px}
+    .features{margin:18px 0;padding-left:20px}
+    .features li{margin:8px 0}
+    .btn{display:block;text-align:center;background:#e00000;color:#fff;text-decoration:none;padding:15px;border-radius:10px;font-size:20px;font-weight:bold;margin-top:18px}
+    .section{background:#fff;padding:28px 20px;margin:20px 0;border-radius:18px;box-shadow:0 3px 15px #0000000b}
+    .section h2{text-align:center;margin-bottom:18px;font-size:28px}
+    .order{max-width:600px;margin:auto}
+    input,textarea,select{width:100%;padding:13px;margin:7px 0 13px;border:1px solid #ddd;border-radius:8px;font-size:16px}
+    button{width:100%;border:0;background:#e00000;color:#fff;padding:15px;border-radius:9px;font-size:19px;font-weight:bold;cursor:pointer}
+    .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+    .trust div{padding:18px;background:#fff4f4;border-radius:12px}
+    footer{text-align:center;padding:25px;color:#777}
+    @media(max-width:750px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:30px}
+      .gallery img{height:230px}
+      .trust{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="top">🚚 সারা বাংলাদেশে ডেলিভারি • ক্যাশ অন ডেলিভারি</div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="gallery">
+        <img src="images/saree-1.jpg" alt="শাড়ি">
+        <img src="images/saree-2.jpg" alt="শাড়ি">
+        <img src="images/saree-3.jpg" alt="শাড়ি">
+        <img src="images/saree-4.jpg" alt="শাড়ি">
+      </div>
+
+      <div>
+        <span class="tag">🔥 Limited Stock</span>
+        <h1>এলিগ্যান্ট ও স্টাইলিশ শাড়ি</h1>
+        <p>ঐতিহ্যবাহী লুকের সাথে আধুনিক ডিজাইনের সুন্দর শাড়ি। উৎসব, বিয়ে বা বিশেষ দিনের জন্য দারুণ পছন্দ।</p>
+        <div class="price">৳ ৯৯০ <span class="old">৳ ১,২৯০</span></div>
+        <ul class="features">
+          <li>✅ আকর্ষণীয় ডিজাইন</li>
+          <li>✅ আরামদায়ক ও স্টাইলিশ</li>
+          <li>✅ উপহার হিসেবেও উপযুক্ত</li>
+          <li>✅ ক্যাশ অন ডেলিভারি</li>
+        </ul>
+        <a class="btn" href="#order">🛒 এখনই অর্ডার করুন</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>কেন আমাদের থেকে কিনবেন?</h2>
+      <div class="trust">
+        <div>🚚<br><b>দ্রুত ডেলিভারি</b><br>সারা বাংলাদেশে</div>
+        <div>💵<br><b>ক্যাশ অন ডেলিভারি</b><br>পণ্য হাতে পেয়ে পেমেন্ট</div>
+        <div>🔒<br><b>নিরাপদ অর্ডার</b><br>সহজ অর্ডার প্রক্রিয়া</div>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <h2>অর্ডার করতে তথ্য দিন</h2>
+      <form class="order" onsubmit="sendOrder(event)">
+        <label>আপনার নাম</label>
+        <input id="name" required placeholder="আপনার নাম লিখুন">
+        <label>মোবাইল নম্বর</label>
+        <input id="phone" required type="tel" placeholder="01XXXXXXXXX">
+        <label>সম্পূর্ণ ঠিকানা</label>
+        <textarea id="address" required rows="3" placeholder="জেলা, উপজেলা/থানা, গ্রাম/এলাকা"></textarea>
+        <label>রং/ভ্যারিয়েন্ট</label>
+        <select id="variant">
+          <option>ছবির মতো</option>
+          <option>লাল</option>
+          <option>সবুজ</option>
+          <option>সাদা</option>
+        </select>
+        <button type="submit">অর্ডার কনফার্ম করুন</button>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>অর্ডার করার আগে</h2>
+      <p style="text-align:center">পণ্যের স্টক ও ডেলিভারি চার্জ নিশ্চিত করে অর্ডার কনফার্ম করা হবে। আপনার সঠিক মোবাইল নম্বর ও ঠিকানা দিন।</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Trendora BD — Online Shopping</footer>
+
+  <script>
+    function sendOrder(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value;
+      const phone=document.getElementById('phone').value;
+      const address=document.getElementById('address').value;
+      const variant=document.getElementById('variant').value;
+
+      // এখানে আপনার WhatsApp নম্বর বসাবেন, যেমন: 8801XXXXXXXXX
+      const whatsapp="8801XXXXXXXXX";
+      const msg=`নতুন অর্ডার%0Aনাম: ${encodeURIComponent(name)}%0Aমোবাইল: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aভ্যারিয়েন্ট: ${encodeURIComponent(variant)}%0Aপণ্য: স্টাইলিশ শাড়ি%0Aদাম: ৳990`;
+      if(whatsapp.includes("X")){
+        alert("WhatsApp নম্বরটি HTML ফাইলে বসান। তারপর অর্ডার বাটন কাজ করবে।");
+      }else{
+        window.open(`https://wa.me/${whatsapp}?text=${msg}`,"_blank");
+      }
+    }
+  </script>
+</body>
+</html>
