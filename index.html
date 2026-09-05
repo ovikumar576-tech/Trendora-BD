@@ -6,8 +6,6 @@
 
   <title>Trendora BD | Online Store</title>
 
-  <meta name="description" content="Trendora BD - Trending Gadgets & Fashion. সহজ অর্ডার এবং Cash on Delivery.">
-
   <style>
     * {
       box-sizing: border-box;
@@ -16,204 +14,196 @@
     }
 
     body {
-      font-family: Arial, "Noto Sans Bengali", sans-serif;
-      background: #f6f6f6;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
       color: #222;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
     }
 
     header {
       background: #111;
-      color: #fff;
-      padding: 16px 5%;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-    }
-
-    .nav a {
-      color: #fff;
-      margin-left: 18px;
-      font-size: 15px;
+    header p {
+      font-size: 16px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #111, #333);
-      color: #fff;
-      padding: 70px 5%;
       text-align: center;
+      padding: 35px 15px;
+      background: white;
     }
 
-    .hero h1 {
-      font-size: 45px;
-      margin-bottom: 12px;
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      color: #ddd;
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto auto 25px;
+      margin-bottom: 20px;
     }
 
     .btn {
       display: inline-block;
-      background: #ff4d4d;
-      color: #fff;
-      padding: 13px 24px;
+      background: #111;
+      color: white;
+      padding: 12px 22px;
       border-radius: 8px;
+      text-decoration: none;
+      margin: 5px;
       border: none;
       cursor: pointer;
       font-size: 16px;
-      font-weight: 700;
     }
 
     .btn:hover {
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     .btn.alt {
-      background: #fff;
-      color: #111;
+      background: #1877f2;
     }
 
-    section {
+    .products-section {
+      padding: 35px 15px;
       max-width: 1100px;
       margin: auto;
-      padding: 55px 5%;
     }
 
     .title {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 30px;
+      margin-bottom: 25px;
+      font-size: 28px;
     }
 
     .products {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: #fff;
-      max-width: 380px;
-      width: 100%;
-      border-radius: 14px;
+      background: white;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
     }
 
     .pic {
-      height: 300px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      height: 400px;
+      padding: 5px;
       background: #eee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #777;
-      font-size: 18px;
+    }
+
+    .pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
     }
 
     .card-body {
-      padding: 22px;
+      padding: 20px;
+      background: white;
+      position: relative;
+      z-index: 2;
     }
 
-    .card h3 {
+    .card-body h3 {
       font-size: 22px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .price {
-      font-size: 26px;
-      font-weight: 800;
-      margin: 10px 0;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .features {
-      margin: 15px 0;
-      color: #555;
+      line-height: 1.8;
+      margin-bottom: 15px;
     }
 
-    .features div {
-      margin: 5px 0;
+    #order {
+      background: white;
+      padding: 35px 15px;
+      margin-top: 20px;
     }
 
-    .order {
-      background: #fff;
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 600px;
+    #order h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    #order p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
       margin: auto;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
-    .order input,
-    .order textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 13px;
-      margin: 7px 0;
+      margin-bottom: 12px;
       border: 1px solid #ccc;
-      border-radius: 7px;
+      border-radius: 8px;
       font-size: 16px;
     }
 
-    .order textarea {
+    textarea {
       min-height: 100px;
       resize: vertical;
     }
 
-    .order button {
+    form .btn {
       width: 100%;
-      margin-top: 10px;
     }
 
-    .contact {
-      background: #111;
-      color: #fff;
+    .contact-buttons {
       text-align: center;
-      max-width: none;
-    }
-
-    .contact p {
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     footer {
-      background: #080808;
-      color: #aaa;
+      background: #111;
+      color: white;
       text-align: center;
-      padding: 22px;
+      padding: 20px 10px;
+      margin-top: 20px;
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
+      header h1 {
+        font-size: 26px;
       }
 
-      .nav a {
-        margin-left: 8px;
-        font-size: 13px;
+      .hero h2 {
+        font-size: 23px;
       }
 
-      .order {
-        padding: 20px;
+      .pic {
+        height: 330px;
+      }
+
+      .card-body h3 {
+        font-size: 20px;
       }
     }
   </style>
@@ -221,78 +211,64 @@
 
 <body>
 
-<header>
-  <div class="nav">
-    <div class="logo">Trendora BD</div>
+  <header>
+    <h1>Trendora BD</h1>
+    <p>Trending Gadgets & Fashion</p>
+  </header>
 
-    <div>
-      <a href="#products">Products</a>
-      <a href="#order">Order</a>
-    </div>
-  </div>
-</header>
+  <section class="hero">
+    <h2>আপনার পছন্দের পণ্য</h2>
+    <p>সহজ অর্ডার এবং Cash on Delivery</p>
+    <a class="btn" href="#products">Shop Now</a>
+  </section>
 
+  <section class="products-section" id="products">
 
-<section class="hero">
+    <h2 class="title">Our Products</h2>
 
-  <h1>Trendora BD</h1>
+    <div class="products">
 
-  <p>
-    Trending Gadgets & Fashion —
-    আপনার পছন্দের পণ্য, সহজ অর্ডার এবং Cash on Delivery.
-  </p>
+      <div class="card">
 
-  <a class="btn" href="#products">Shop Now</a>
-
-</section>
-
-
-<section id="products">
-
-  <h2 class="title">Our Products</h2>
-
-  <div class="products">
-
-    <div class="card">
-
-      <div class="pic" style="display:grid; grid-template-columns:1fr 1fr; gap:5px;">
-  <img src="Saree1.jpeg" alt="শাড়ি ১" style="width:100%; height:100%; object-fit:cover;">
-  <img src="Sarre1.jpeg" alt="শাড়ি ২" style="width:100%; height:100%; object-fit:cover;">
-  <img src="sare1.jpeg" alt="শাড়ি ৩" style="width:100%; height:100%; object-fit:cover;">
-  <img src="sharee1.jpeg" alt="শাড়ি ৪" style="width:100%; height:100%; object-fit:cover;">
-</div>
-
-      <div class="card-body">
-
-        <h3>Chanderi Silk Digital Print Saree</h3>
-
-        <div class="price">৳ 1,000</div>
-
-        <div class="features">
-          <div>✨ Fabric: Chanderi Silk</div>
-          <div>🌸 Multi-color floral design</div>
-          <div>💕 Soft & comfortable</div>
-          <div>👗 Elegant look</div>
-          <div>ℹ️ Blouse piece নেই</div>
-          <div>🎉 Party, অনুষ্ঠান ও photoshoot-এর জন্য উপযুক্ত</div>
+        <div class="pic">
+          <img src="Saree1.jpeg" alt="শাড়ি ১">
+          <img src="Sarre1.jpeg" alt="শাড়ি ২">
+          <img src="sare1.jpeg" alt="শাড়ি ৩">
+          <img src="sharee1.jpeg" alt="শাড়ি ৪">
         </div>
 
-        <a class="btn" href="#order">Order Now</a>
+        <div class="card-body">
+
+          <h3>Chanderi Silk Digital Print Saree</h3>
+
+          <div class="price">৳ 1,000</div>
+
+          <div class="features">
+            <div>✨ Fabric: Chanderi Silk</div>
+            <div>🌸 Multi-color floral design</div>
+            <div>💕 Soft & comfortable</div>
+            <div>👗 Elegant look</div>
+            <div>ℹ️ Blouse piece নেই</div>
+            <div>🎉 Party, অনুষ্ঠান ও photoshoot-এর জন্য উপযুক্ত</div>
+          </div>
+
+          <a class="btn" href="#order">Order Now</a>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <section id="order">
 
+    <h2>অর্ডার করুন</h2>
 
-<section id="order">
-
-  <h2 class="title">Place Your Order</h2>
-
-  <div class="order">
+    <p>
+      নিচের তথ্যগুলো পূরণ করে WhatsApp-এ অর্ডার পাঠান।
+    </p>
 
     <form onsubmit="sendOrder(); return false;">
 
@@ -306,7 +282,7 @@
       <input
         type="tel"
         id="phone"
-        placeholder="আপনার মোবাইল নম্বর"
+        placeholder="মোবাইল নম্বর"
         required
       >
 
@@ -317,77 +293,65 @@
       ></textarea>
 
       <button class="btn" type="submit">
-        Confirm Order on WhatsApp
+        WhatsApp-এ অর্ডার করুন
       </button>
 
     </form>
 
-  </div>
+    <div class="contact-buttons">
 
-</section>
+      <a
+        class="btn"
+        target="_blank"
+        href="https://wa.me/8801707443977"
+      >
+        WhatsApp
+      </a>
 
+      <a
+        class="btn alt"
+        target="_blank"
+        href="https://www.facebook.com/share/1EE01NfhcJ/"
+      >
+        Facebook Page
+      </a>
 
-<section class="contact">
+    </div>
 
-  <h2>Contact Us</h2>
+  </section>
 
-  <p>
-    অর্ডার করতে WhatsApp-এ মেসেজ করুন অথবা আমাদের Facebook Page ভিজিট করুন।
-  </p>
+  <footer>
+    © 2026 Trendora BD. All rights reserved.
+  </footer>
 
-  <a
-    class="btn"
-    target="_blank"
-    href="https://wa.me/8801707443977"
-  >
-    WhatsApp
-  </a>
+  <script>
 
-  <a
-    class="btn alt"
-    target="_blank"
-    href="https://www.facebook.com/share/1EE01NfhcJ/"
-  >
-    Facebook Page
-  </a>
+    function sendOrder() {
 
-</section>
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const address = document.getElementById("address").value;
 
+      const message =
+        "🛍️ New Order - Trendora BD\n\n" +
+        "Product: Chanderi Silk Digital Print Saree\n" +
+        "Price: ৳1000\n\n" +
+        "Customer Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Address: " + address;
 
-<footer>
-  © 2026 Trendora BD. All rights reserved.
-</footer>
+      const whatsappNumber = "8801707443977";
 
+      const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
 
-<script>
+      window.open(url, "_blank");
+    }
 
-function sendOrder() {
-
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const address = document.getElementById("address").value;
-
-  const message =
-    "🛍️ New Order - Trendora BD\n\n" +
-    "Product: Chanderi Silk Digital Print Saree\n" +
-    "Price: ৳1000\n\n" +
-    "Customer Name: " + name + "\n" +
-    "Phone: " + phone + "\n" +
-    "Address: " + address;
-
-  const whatsappNumber = "8801707443977";
-
-  const url =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
-
-  window.open(url, "_blank");
-
-}
-
-</script>
+  </script>
 
 </body>
 </html>
