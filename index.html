@@ -1,357 +1,679 @@
-5<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Trendora BD | Online Store</title>
+<title>Trendora BD | Online Shopping</title>
+<meta name="description" content="Trendora BD - Trending Gadgets & Fashion">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
-    }
+body{
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#f6f7fb;
+  color:#222;
+  line-height:1.6;
+}
 
-    header {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
+a{
+  text-decoration:none;
+}
 
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+header{
+  background:#111;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 10px #0003;
+}
 
-    header p {
-      font-size: 16px;
-    }
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    .hero {
-      text-align: center;
-      padding: 35px 15px;
-      background: white;
-    }
+.logo{
+  font-size:25px;
+  font-weight:bold;
+}
 
-    .hero h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+.logo span{
+  color:#ff3f6c;
+}
 
-    .hero p {
-      margin-bottom: 20px;
-    }
+.nav-links a{
+  color:white;
+  margin-left:15px;
+  font-size:14px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #111;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin: 5px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
+/* HERO */
 
-    .btn:hover {
-      opacity: 0.85;
-    }
+.hero{
+  background:linear-gradient(135deg,#111,#3a0d20);
+  color:white;
+  padding:65px 18px;
+}
 
-    .btn.alt {
-      background: #1877f2;
-    }
+.hero-inner{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+  align-items:center;
+}
 
-    .products-section {
-      padding: 35px 15px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.hero h1{
+  font-size:48px;
+  line-height:1.1;
+  margin-bottom:15px;
+}
 
-    .title {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 28px;
-    }
+.hero h1 span{
+  color:#ff3f6c;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+.hero p{
+  color:#ddd;
+  font-size:18px;
+  margin-bottom:25px;
+}
 
-    .card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-    }
+.btn{
+  display:inline-block;
+  background:#ff3f6c;
+  color:white;
+  padding:13px 22px;
+  border-radius:8px;
+  font-weight:bold;
+  margin-right:7px;
+}
 
-    .pic {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5px;
-      height: 520px;
-      padding: 5px;
-      background: #eee;
-    }
+.btn:hover{
+  opacity:.9;
+}
 
-    .pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 6px;
-      display: block;
-    }
+.btn.white{
+  background:white;
+  color:#111;
+}
 
-    .card-body {
-      padding: 20px;
-      background: white;
-      position: relative;
-      z-index: 2;
-    }
+.hero-box{
+  background:white;
+  color:#222;
+  border-radius:20px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 15px 40px #0005;
+}
 
-    .card-body h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
+.hero-box .icon{
+  font-size:75px;
+  margin-bottom:10px;
+}
 
-    .price {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+/* SECTION */
 
-    .features {
-      line-height: 1.8;
-      margin-bottom: 15px;
-    }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:55px 18px;
+}
 
-    #order {
-      background: white;
-      padding: 35px 15px;
-      margin-top: 20px;
-    }
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
 
-    #order h2 {
-      text-align: center;
-      margin-bottom: 15px;
-    }
+.section-title h2{
+  font-size:32px;
+  margin-bottom:5px;
+}
 
-    #order p {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.section-title p{
+  color:#777;
+}
 
-    form {
-      max-width: 500px;
-      margin: auto;
-    }
+/* PRODUCTS */
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-    }
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
 
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
+.card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 20px #00000012;
+  transition:.2s;
+}
 
-    form .btn {
-      width: 100%;
-    }
+.card:hover{
+  transform:translateY(-4px);
+}
 
-    .contact-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
+.product-image{
+  height:250px;
+  background:#eee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
 
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 20px;
-    }
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 26px;
-      }
+.image-placeholder{
+  font-size:65px;
+}
 
-      .hero h2 {
-        font-size: 23px;
-      }
+.card-body{
+  padding:18px;
+}
 
-      .pic {
-        height: 330px;
-      }
+.card-body h3{
+  font-size:20px;
+  margin-bottom:7px;
+}
 
-      .card-body h3 {
-        font-size: 20px;
-      }
-    }
-  </style>
+.card-body p{
+  color:#666;
+  font-size:14px;
+}
+
+.price{
+  margin:13px 0;
+}
+
+.old-price{
+  color:#999;
+  text-decoration:line-through;
+  margin-right:8px;
+}
+
+.new-price{
+  color:#e91e50;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.order-btn{
+  display:block;
+  text-align:center;
+  background:#111;
+  color:white;
+  padding:11px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.order-btn:hover{
+  background:#ff3f6c;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.feature{
+  background:white;
+  padding:25px 18px;
+  text-align:center;
+  border-radius:13px;
+  box-shadow:0 4px 15px #00000010;
+}
+
+.feature-icon{
+  font-size:38px;
+}
+
+.feature h3{
+  margin:8px 0;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#111;
+  color:white;
+  border-radius:18px;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.contact p{
+  color:#ccc;
+  margin:10px 0 22px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#090909;
+  color:#aaa;
+  text-align:center;
+  padding:25px 15px;
+  font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .nav{
+    padding:13px 12px;
+  }
+
+  .logo{
+    font-size:21px;
+  }
+
+  .nav-links a{
+    margin-left:8px;
+    font-size:12px;
+  }
+
+  .hero{
+    padding:50px 18px;
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .product-image{
+    height:210px;
+  }
+
+  .card-body{
+    padding:13px;
+  }
+
+  .card-body h3{
+    font-size:17px;
+  }
+
+  .new-price{
+    font-size:19px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:450px){
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .product-image{
+    height:280px;
+  }
+
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Trendora BD</h1>
-    <p>Trending Gadgets & Fashion</p>
-  </header>
+<!-- HEADER -->
 
-  <section class="hero">
-    <h2>আপনার পছন্দের পণ্য</h2>
-    <p>সহজ অর্ডার এবং Cash on Delivery</p>
-    <a class="btn" href="#products">Shop Now</a>
-  </section>
+<header>
+  <div class="nav">
 
-  <section class="products-section" id="products">
-
-    <h2 class="title">Our Products</h2>
-
-    <div class="products">
-
-      <div class="card">
-
-        <div class="pic">
-          <img src="Saree1.jpeg" alt="শাড়ি ১">
-          <img src="Sarre1.jpeg" alt="শাড়ি ২">
-          <img src="sare1.jpeg" alt="শাড়ি ৩">
-          <img src="sharee1.jpeg" alt="শাড়ি ৪">
-        </div>
-
-        <div class="card-body">
-
-          <h3>Chanderi Silk Digital Print Saree</h3>
-
-          <div class="price">৳ 1,000</div>
-
-          <div class="features">
-            <div>✨ Fabric: Chanderi Silk</div>
-            <div>🌸 Multi-color floral design</div>
-            <div>💕 Soft & comfortable</div>
-            <div>👗 Elegant look</div>
-            <div>ℹ️ Blouse piece নেই</div>
-            <div>🎉 Party, অনুষ্ঠান ও photoshoot-এর জন্য উপযুক্ত</div>
-          </div>
-
-          <a class="btn" href="#order">Order Now</a>
-
-        </div>
-
-      </div>
-
+    <div class="logo">
+      Trendora <span>BD</span>
     </div>
 
-  </section>
+    <div class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-  <section id="order">
+  </div>
+</header>
 
-    <h2>অর্ডার করুন</h2>
 
-    <p>
-      নিচের তথ্যগুলো পূরণ করে WhatsApp-এ অর্ডার পাঠান।
-    </p>
+<!-- HERO -->
 
-    <form onsubmit="sendOrder(); return false;">
+<section class="hero">
 
-      <input
-        type="text"
-        id="name"
-        placeholder="আপনার নাম"
-        required
-      >
+  <div class="hero-inner">
 
-      <input
-        type="tel"
-        id="phone"
-        placeholder="মোবাইল নম্বর"
-        required
-      >
+    <div>
 
-      <textarea
-        id="address"
-        placeholder="আপনার সম্পূর্ণ ঠিকানা"
-        required
-      ></textarea>
+      <h1>
+        Trendora <span>BD</span>
+      </h1>
 
-      <button class="btn" type="submit">
-        WhatsApp-এ অর্ডার করুন
-      </button>
+      <p>
+        ট্রেন্ডিং Gadgets & Fashion পণ্য এখন সহজেই অর্ডার করুন।
+        Cash on Delivery সুবিধা রয়েছে।
+      </p>
 
-    </form>
-
-    <div class="contact-buttons">
-
-      <a
-        class="btn"
-        target="_blank"
-        href="https://wa.me/8801707443977"
-      >
-        WhatsApp
+      <a class="btn" href="#products">
+        🛍️ Shop Now
       </a>
 
-      <a
-        class="btn alt"
-        target="_blank"
-        href="https://www.facebook.com/share/1EE01NfhcJ/"
-      >
+      <a class="btn white"
+         href="https://www.facebook.com/share/1EEo1NfhcJ/"
+         target="_blank">
         Facebook Page
       </a>
 
     </div>
 
-  </section>
 
-  <footer>
-    © 2026 Trendora BD. All rights reserved.
-  </footer>
+    <div class="hero-box">
 
-  <script>
+      <div class="icon">🛍️</div>
 
-    function sendOrder() {
+      <h2>Shop Smart. Shop Trendy.</h2>
 
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const address = document.getElementById("address").value;
+      <p>
+        Gadgets • Fashion • More
+      </p>
 
-      const message =
-        "🛍️ New Order - Trendora BD\n\n" +
-        "Product: Chanderi Silk Digital Print Saree\n" +
-        "Price: ৳1000\n\n" +
-        "Customer Name: " + name + "\n" +
-        "Phone: " + phone + "\n" +
-        "Address: " + address;
+    </div>
 
-      const whatsappNumber = "8801707443977";
+  </div>
 
-      const url =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
+</section>
 
-      window.open(url, "_blank");
-    }
 
-  </script>
+<!-- PRODUCTS -->
+
+<section id="products">
+
+  <div class="section-title">
+
+    <h2>🔥 Featured Products</h2>
+
+    <p>
+      আমাদের জনপ্রিয় পণ্যগুলো দেখে অর্ডার করুন
+    </p>
+
+  </div>
+
+
+  <div class="products">
+
+
+    <!-- PRODUCT 1 -->
+
+    <div class="card">
+
+      <div class="product-image">
+
+        <!-- এখানে আপনার পণ্যের ছবি বসাবেন -->
+        <div class="image-placeholder">
+          🎧
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <h3>Wireless Earbuds</h3>
+
+        <p>
+          স্টাইলিশ Wireless Earbuds।
+          দৈনন্দিন ব্যবহারের জন্য উপযোগী।
+        </p>
+
+        <div class="price">
+
+          <span class="old-price">৳1,200</span>
+
+          <span class="new-price">৳799</span>
+
+        </div>
+
+        <a class="order-btn"
+           href="https://wa.me/8801707443977?text=আমি%20Wireless%20Earbuds%20অর্ডার%20করতে%20চাই।"
+           target="_blank">
+
+          🛒 Order Now
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div class="card">
+
+      <div class="product-image">
+
+        <div class="image-placeholder">
+          ⌚
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <h3>Smart Watch</h3>
+
+        <p>
+          ট্রেন্ডি ডিজাইন ও স্মার্ট ফিচারসহ
+          আকর্ষণীয় Smart Watch।
+        </p>
+
+        <div class="price">
+
+          <span class="old-price">৳1,800</span>
+
+          <span class="new-price">৳1,199</span>
+
+        </div>
+
+        <a class="order-btn"
+           href="https://wa.me/8801707443977?text=আমি%20Smart%20Watch%20অর্ডার%20করতে%20চাই।"
+           target="_blank">
+
+          🛒 Order Now
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+
+    <div class="card">
+
+      <div class="product-image">
+
+        <div class="image-placeholder">
+          👗
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <h3>Trending Fashion</h3>
+
+        <p>
+          নতুন ট্রেন্ডের পোশাক ও
+          ফ্যাশন আইটেম।
+        </p>
+
+        <div class="price">
+
+          <span class="old-price">৳1,500</span>
+
+          <span class="new-price">৳999</span>
+
+        </div>
+
+        <a class="order-btn"
+           href="https://wa.me/8801707443977?text=আমি%20Fashion%20Product%20অর্ডার%20করতে%20চাই।"
+           target="_blank">
+
+          🛒 Order Now
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section>
+
+  <div class="section-title">
+
+    <h2>⭐ কেন Trendora BD?</h2>
+
+    <p>
+      আপনার কেনাকাটা সহজ ও সুবিধাজনক করার চেষ্টা করি
+    </p>
+
+  </div>
+
+
+  <div class="features">
+
+
+    <div class="feature">
+
+      <div class="feature-icon">🚚</div>
+
+      <h3>Cash on Delivery</h3>
+
+      <p>
+        পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন।
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">🔥</div>
+
+      <h3>Trending Products</h3>
+
+      <p>
+        জনপ্রিয় ও ট্রেন্ডিং পণ্যের কালেকশন।
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">💬</div>
+
+      <h3>Easy Support</h3>
+
+      <p>
+        WhatsApp-এর মাধ্যমে সহজে যোগাযোগ করুন।
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="contact">
+
+    <h2>📞 Order / Contact Us</h2>
+
+    <p>
+      অর্ডার করতে WhatsApp-এ মেসেজ করুন।
+    </p>
+
+
+    <a class="btn"
+       href="https://wa.me/8801707443977"
+       target="_blank">
+
+      💬 WhatsApp Order
+
+    </a>
+
+
+    <a class="btn white"
+       href="https://www.facebook.com/share/1EEo1NfhcJ/"
+       target="_blank">
+
+      Facebook Page
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  © 2026 Trendora BD. All rights reserved.
+
+</footer>
+
 
 </body>
 </html>
