@@ -3,213 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Trendora BD | Three Piece Collection</title>
+<title>Trendora BD | Three Piece</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:Arial,"Noto Sans Bengali",sans-serif;
-  background:#f8f7f8;
-  color:#222;
+font-family:Arial,"Noto Sans Bengali",sans-serif;
+background:#f8f7f8;
+color:#222;
 }
 
 header{
-  background:#111;
-  color:#fff;
-  padding:16px;
-  text-align:center;
+background:#111;
+color:white;
+padding:16px;
+text-align:center;
 }
 
-.logo{
-  font-size:25px;
-  font-weight:bold;
-}
-
-.logo span{
-  color:#ff4770;
-}
+.logo{font-size:25px;font-weight:bold}
+.logo span{color:#ff4770}
 
 section{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 18px;
+max-width:1100px;
+margin:auto;
+padding:40px 18px;
 }
 
-.title{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.title h1{
-  font-size:30px;
-}
-
-.title p{
-  color:#777;
-  margin-top:5px;
-}
+.title{text-align:center;margin-bottom:30px}
+.title h1{font-size:30px}
+.title p{color:#777;margin-top:5px}
 
 .products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .card{
-  background:#fff;
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 5px 20px #00000015;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px #00000015;
 }
 
-.product-image{
-  height:420px;
-  background:#eee;
-}
+.product-image{height:420px;background:#eee}
 
 .product-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
 }
 
-.card-body{
-  padding:18px;
-}
-
-.card-body h2{
-  font-size:20px;
-  margin-bottom:7px;
-}
-
-.card-body p{
-  color:#666;
-  font-size:14px;
-}
+.card-body{padding:18px}
+.card-body h2{font-size:20px;margin-bottom:7px}
+.card-body p{color:#666;font-size:14px}
 
 .price{
-  color:#e62e5b;
-  font-size:24px;
-  font-weight:bold;
-  margin:12px 0;
+color:#e62e5b;
+font-size:24px;
+font-weight:bold;
+margin:12px 0;
 }
 
 .order{
-  width:100%;
-  border:0;
-  background:#111;
-  color:#fff;
-  padding:12px;
-  border-radius:8px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
+width:100%;
+border:0;
+background:#111;
+color:white;
+padding:12px;
+border-radius:8px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
 }
-
-.order:hover{
-  background:#ff4770;
-}
-
-/* Order Form */
 
 #orderForm{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:#0009;
-  z-index:999;
-  padding:20px;
-  overflow:auto;
+display:none;
+position:fixed;
+inset:0;
+background:#0009;
+z-index:999;
+padding:20px;
+overflow:auto;
 }
 
 .form-box{
-  max-width:500px;
-  margin:30px auto;
-  background:#fff;
-  border-radius:15px;
-  padding:25px;
-  position:relative;
+max-width:500px;
+margin:30px auto;
+background:white;
+border-radius:15px;
+padding:25px;
+position:relative;
 }
 
 .close{
-  position:absolute;
-  right:15px;
-  top:5px;
-  font-size:30px;
-  cursor:pointer;
+position:absolute;
+right:15px;
+top:5px;
+font-size:30px;
+cursor:pointer;
 }
 
-.form-box h2{
-  text-align:center;
-  margin-bottom:5px;
-}
+.form-box h2{text-align:center;margin-bottom:5px}
 
 .selected{
-  text-align:center;
-  color:#e62e5b;
-  font-weight:bold;
-  margin-bottom:20px;
+text-align:center;
+color:#e62e5b;
+font-weight:bold;
+margin-bottom:20px;
 }
 
-.form-group{
-  margin-bottom:15px;
-}
+.form-group{margin-bottom:15px}
 
 .form-group label{
-  display:block;
-  font-weight:bold;
-  margin-bottom:5px;
+display:block;
+font-weight:bold;
+margin-bottom:5px;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select{
-  width:100%;
-  padding:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:15px;
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
 }
 
-.form-group textarea{
-  height:90px;
-}
+.form-group textarea{height:90px}
 
 .submit{
-  width:100%;
-  background:#25D366;
-  color:#fff;
-  border:0;
-  padding:13px;
-  border-radius:8px;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
+width:100%;
+background:#25D366;
+color:white;
+border:0;
+padding:13px;
+border-radius:8px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
 }
 
 footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  margin-top:20px;
+background:#111;
+color:#aaa;
+text-align:center;
+padding:20px;
+margin-top:20px;
 }
 
 @media(max-width:750px){
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .product-image{
-    height:480px;
-  }
+.products{grid-template-columns:1fr}
+.product-image{height:480px}
 }
 </style>
 </head>
@@ -217,272 +165,156 @@ footer{
 <body>
 
 <header>
-  <div class="logo">
-    Trendora <span>BD</span>
-  </div>
+<div class="logo">Trendora <span>BD</span></div>
 </header>
-
 
 <section>
 
-  <div class="title">
-    <h1>✨ Three Piece Collection</h1>
-    <p>নতুন ও আকর্ষণীয় থ্রীপিস কালেকশন</p>
-  </div>
+<div class="title">
+<h1>✨ Three Piece Collection</h1>
+<p>নতুন ও আকর্ষণীয় থ্রীপিস কালেকশন</p>
+</div>
 
+<div class="products">
 
-  <div class="products">
+<div class="card">
+<div class="product-image">
+<img src="threepiece1.jpg" alt="Three Piece 1">
+</div>
+<div class="card-body">
+<h2>Three Piece 1</h2>
+<p>সুন্দর ও আকর্ষণীয় থ্রীপিস।</p>
+<div class="price">৳900</div>
+<button class="order" onclick="openOrder('Three Piece 1','900')">
+🛒 Order Now
+</button>
+</div>
+</div>
 
+<div class="card">
+<div class="product-image">
+<img src="threepiece2.jpg" alt="Three Piece 2">
+</div>
+<div class="card-body">
+<h2>Three Piece 2</h2>
+<p>সুন্দর ও আকর্ষণীয় থ্রীপিস।</p>
+<div class="price">৳850</div>
+<button class="order" onclick="openOrder('Three Piece 2','850')">
+🛒 Order Now
+</button>
+</div>
+</div>
 
-    <!-- Three Piece 1 -->
+<div class="card">
+<div class="product-image">
+<img src="threepiece3.jpg" alt="Three Piece 3">
+</div>
+<div class="card-body">
+<h2>Three Piece 3</h2>
+<p>সুন্দর ও আকর্ষণীয় থ্রীপিস।</p>
+<div class="price">৳800</div>
+<button class="order" onclick="openOrder('Three Piece 3','800')">
+🛒 Order Now
+</button>
+</div>
+</div>
 
-    <div class="card">
-
-      <div class="product-image">
-        <img src="threepiece1.jpg" alt="Three Piece 1">
-      </div>
-
-      <div class="card-body">
-
-        <h2>Three Piece 1</h2>
-
-        <p>
-          সুন্দর ও আকর্ষণীয় থ্রীপিস।
-        </p>
-
-        <div class="price">
-          ৳900
-        </div>
-
-        <button class="order"
-          onclick="openOrder('Three Piece 1','900')">
-          🛒 Order Now
-        </button>
-
-      </div>
-    </div>
-
-
-    <!-- Three Piece 2 -->
-
-    <div class="card">
-
-      <div class="product-image">
-        <img src="threepiece2.jpg" alt="Three Piece 2">
-      </div>
-
-      <div class="card-body">
-
-        <h2>Three Piece 2</h2>
-
-        <p>
-          সুন্দর ও আকর্ষণীয় থ্রীপিস।
-        </p>
-
-        <div class="price">
-          ৳850
-        </div>
-
-        <button class="order"
-          onclick="openOrder('Three Piece 2','850')">
-          🛒 Order Now
-        </button>
-
-      </div>
-    </div>
-
-
-    <!-- Three Piece 3 -->
-
-    <div class="card">
-
-      <div class="product-image">
-        <img src="threepiece3.jpg" alt="Three Piece 3">
-      </div>
-
-      <div class="card-body">
-
-        <h2>Three Piece 3</h2>
-
-        <p>
-          সুন্দর ও আকর্ষণীয় থ্রীপিস।
-        </p>
-
-        <div class="price">
-          ৳800
-        </div>
-
-        <button class="order"
-          onclick="openOrder('Three Piece 3','800')">
-          🛒 Order Now
-        </button>
-
-      </div>
-    </div>
-
-  </div>
-
+</div>
 </section>
-
-
-<!-- ORDER FORM -->
 
 <div id="orderForm">
 
-  <div class="form-box">
+<div class="form-box">
 
-    <span class="close" onclick="closeOrder()">×</span>
+<span class="close" onclick="closeOrder()">×</span>
 
-    <h2>🛍️ অর্ডার করুন</h2>
+<h2>🛍️ অর্ডার করুন</h2>
 
-    <div class="selected" id="selectedProduct"></div>
+<div class="selected" id="selectedProduct"></div>
 
+<form onsubmit="sendOrder(event)">
 
-    <form onsubmit="sendOrder(event)">
-
-      <div class="form-group">
-
-        <label>👤 আপনার নাম</label>
-
-        <input
-          type="text"
-          id="name"
-          placeholder="আপনার নাম লিখুন"
-          required>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label>📞 ফোন নম্বর</label>
-
-        <input
-          type="tel"
-          id="phone"
-          placeholder="01XXXXXXXXX"
-          required>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label>📍 সম্পূর্ণ ঠিকানা</label>
-
-        <textarea
-          id="address"
-          placeholder="গ্রাম/বাসা, রোড, থানা, জেলা"
-          required></textarea>
-
-      </div>
-
-
-      <div class="form-group">
-
-        <label>🔢 পরিমাণ</label>
-
-        <select id="quantity">
-
-          <option value="1">1 টি</option>
-          <option value="2">2 টি</option>
-          <option value="3">3 টি</option>
-          <option value="4">4 টি</option>
-          <option value="5">5 টি</option>
-
-        </select>
-
-      </div>
-
-
-      <button class="submit" type="submit">
-        💬 WhatsApp-এ অর্ডার পাঠান
-      </button>
-
-    </form>
-
-  </div>
-
+<div class="form-group">
+<label>👤 আপনার নাম</label>
+<input type="text" id="name" placeholder="আপনার নাম লিখুন" required>
 </div>
 
+<div class="form-group">
+<label>📞 ফোন নম্বর</label>
+<input type="tel" id="phone" placeholder="01XXXXXXXXX" required>
+</div>
+
+<div class="form-group">
+<label>📍 সম্পূর্ণ ঠিকানা</label>
+<textarea id="address" placeholder="গ্রাম/বাসা, রোড, থানা, জেলা" required></textarea>
+</div>
+
+<div class="form-group">
+<label>🔢 পরিমাণ</label>
+<select id="quantity">
+<option value="1">1 টি</option>
+<option value="2">2 টি</option>
+<option value="3">3 টি</option>
+<option value="4">4 টি</option>
+<option value="5">5 টি</option>
+</select>
+</div>
+
+<button class="submit" type="submit">
+💬 WhatsApp-এ অর্ডার পাঠান
+</button>
+
+</form>
+</div>
+</div>
 
 <footer>
 © 2026 Trendora BD. All rights reserved.
 </footer>
 
-
 <script>
-
-let selectedProduct = "";
-let selectedPrice = "";
-
+let selectedProduct="";
+let selectedPrice="";
 
 function openOrder(product,price){
+selectedProduct=product;
+selectedPrice=price;
 
-  selectedProduct = product;
-  selectedPrice = price;
+document.getElementById("selectedProduct").innerText =
+product+" — ৳"+price;
 
-  document.getElementById("selectedProduct").innerText =
-    product + " — ৳" + price;
-
-  document.getElementById("orderForm").style.display = "block";
-
+document.getElementById("orderForm").style.display="block";
 }
-
 
 function closeOrder(){
-
-  document.getElementById("orderForm").style.display = "none";
-
+document.getElementById("orderForm").style.display="none";
 }
-
 
 function sendOrder(event){
+event.preventDefault();
 
-  event.preventDefault();
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+let quantity=document.getElementById("quantity").value;
 
-  let name =
-    document.getElementById("name").value;
+let total=parseInt(selectedPrice)*parseInt(quantity);
 
-  let phone =
-    document.getElementById("phone").value;
+let message=`🛍️ নতুন অর্ডার
 
-  let address =
-    document.getElementById("address").value;
+📦 প্রোডাক্ট: ${selectedProduct}
+💰 প্রতি পিস: ৳${selectedPrice}
+🔢 পরিমাণ: ${quantity} টি
+💵 মোট মূল্য: ৳${total}
 
-  let quantity =
-    document.getElementById("quantity").value;
+👤 নাম: ${name}
+📞 ফোন: ${phone}
+📍 ঠিকানা: ${address}`;
 
-  let total =
-    parseInt(selectedPrice) * parseInt(quantity);
+let whatsapp="https://wa.me/8801707443977?text="+encodeURIComponent(message);
 
-
-  let message =
-    "🛍️ নতুন অর্ডার%0A%0A" +
-
-    "📦 প্রোডাক্ট: " + selectedProduct + "%0A" +
-
-    "💰 প্রতি পিস: ৳" + selectedPrice + "%0A" +
-
-    "🔢 পরিমাণ: " + quantity + " টি%0A" +
-
-    "💵 মোট মূল্য: ৳" + total + "%0A%0A" +
-
-    "👤 নাম: " + name + "%0A" +
-
-    "📞 ফোন: " + phone + "%0A" +
-
-    "📍 ঠিকানা: " + address;
-
-
-  let whatsapp =
-    "https://wa.me/8801707443977?text=" + message;
-
-
-  window.open(whatsapp,"_blank");
-
+window.open(whatsapp,"_blank");
 }
-
 </script>
 
 </body>
